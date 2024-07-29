@@ -24,10 +24,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build and tag Docker image
-      run: docker build -t simple-app:latest .
+      run: docker build -t boahenepatrick2/simple-app:latest .
 
     - name: Push Docker image to Docker Hub
-      run: docker push simple-app:latest  
+      run: docker push boahenepatrick2/simple-app:latest  
     
 
 
