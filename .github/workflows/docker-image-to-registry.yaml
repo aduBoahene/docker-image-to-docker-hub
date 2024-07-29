@@ -24,16 +24,14 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build and tag Docker image
-      run: docker build -t boahenepatrick2/simple-app:latest .
+      run: docker build -t boahenepatrick2/simple-app:1.0.0 .
 
-    # - name: Push Docker image to Docker Hub
-    #   run: 
     
   push-image-to-docker-hub:
     runs-on: ubuntu-latest
     steps:
       - name: Push image to docker hub
-        run: docker push boahenepatrick2/simple-app:latest  
+        run: docker push boahenepatrick2/simple-app:1.0.0  
 
 
 
