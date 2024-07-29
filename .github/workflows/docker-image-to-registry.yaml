@@ -26,10 +26,14 @@ jobs:
     - name: Build and tag Docker image
       run: docker build -t boahenepatrick2/simple-app:latest .
 
-    - name: Push Docker image to Docker Hub
-      run: docker push boahenepatrick2/simple-app:latest  
+    # - name: Push Docker image to Docker Hub
+    #   run: 
     
-
+  push-image-to-docker-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push image to docker hub
+        run: docker push boahenepatrick2/simple-app:latest  
 
 
 
